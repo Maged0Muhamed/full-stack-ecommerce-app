@@ -3,7 +3,7 @@ import type { IProduct } from "./../interfaces/index";
 import { removeFromCartAction } from "@/redux/features/cart/cartSlice";
 import { appDispatch } from "@/redux";
 interface IProp {
-  key: string;
+  key: string | undefined;
   product: IProduct;
 }
 
@@ -12,7 +12,7 @@ const CartDrawerItem = ({ product }: IProp) => {
     title,
     qyt,
     price,
-    thumbnail: { url },
+    thumbnail: { formats },
   } = product;
   const dispatch = appDispatch();
 
@@ -29,7 +29,7 @@ const CartDrawerItem = ({ product }: IProp) => {
           w={"80px"}
           borderRadius={"full"}
           objectFit={"cover"}
-          src={`${import.meta.env.VITE_SERVER_URL}${url}`}
+          src={`${formats.thumbnail.url}`}
           alt={title}
         />
         <Stack>

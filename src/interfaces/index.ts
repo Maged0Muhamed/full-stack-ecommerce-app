@@ -11,7 +11,7 @@ export interface IProduct {
     };
   };
   category: ICategory[];
-  qyt?: string;
+  qyt?: number;
 }
 export interface ICategory {
   documentId: string;

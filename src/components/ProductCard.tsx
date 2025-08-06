@@ -2,7 +2,7 @@ import { Card, Image, Text } from "@chakra-ui/react";
 import type { IProduct } from "./../interfaces/index";
 import type { ReactNode } from "react";
 interface IProp {
-  key: string;
+  key: string | undefined;
   product: IProduct;
   children?: ReactNode;
 }
