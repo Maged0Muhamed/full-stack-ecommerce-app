@@ -370,6 +370,7 @@ const DashboardProductsTable = () => {
             )}
           </Table.Body>
         </Table.Root>
+        <Box>Total Records :{data.length}</Box>
       </Flex>
     </>
   );
